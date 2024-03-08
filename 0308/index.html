@@ -1,4 +1,4 @@
-<html 
+<html
 
 <head>
     <script src="https://juxinglong.github.io/static/iframe-resizer/iframeResizer.contentWindow.min.js"></script>
@@ -7,21 +7,25 @@
     </title>
     <link href="head1.png" rel"icon"/>
     <style>
-        #main 
+        #main
         {
             width:800px;
-            height:600px;
+            height:2000px;
             background-color:lightblue;
             margin:20px;
             margin-left:auto;
             margin-right:auto;
+            position:relative;
         }
-        #div1 
+        #div1
         {
 width:600px;
 height:100px;
 background-color:lightcoral;
 margin-bottom:10px;
+position:fixed;
+margin-bottom:0px;
+position:sticky;
 
         }
         #div2
@@ -30,20 +34,26 @@ margin-bottom:10px;
             height: 100px;
             background-color:lightgoldenrodyellow;
             margin-bottom: 10px;
+            position:relative;
+            left:-50px;
         }
-        #div3 
+        #div3
         {
             width: 600px;
             height: 100px;
             background-color:lightgray ;
             margin-bottom: 10px;
+            position:absolute; 
+            bottom:5px;
         }
-        #div4 
+        #div4
         {
             width: 600px;
             height: 100px;
             background-color: darkolivegreen;
             margin-bottom: 10px;
+            position:sticky;
+            top:0px;
         }
         #div5
         {
@@ -52,19 +62,46 @@ margin-bottom:10px;
             background-color: lightgreen;
             margin-bottom: 10px;
         }
-        #div6 
+        #div6
         {
             width: 600px;
             height: 100px;
             background-color: lightsalmon;
             margin-bottom: 10px;
         }
-        
+
+        .sp1
+        {
+width:100px;
+height:100px
+background-color:forestgreen;
+margin:10px;
+display:inline-block;
+        }
+        .div1 
+        {
+
+            width: 100px;
+            height: 100px; 
+            background-color:forestgreen;
+            margin:10px;       
+
+        }
         </style>
 
-   
+
 </head>
 <body>
+
+    <span class="sp1">span1</span>
+    <span class="sp1">span2</span>
+    <span class="sp1">span3</span>
+
+    <div class="div1">div1</div>
+    <div class="div1">div2</div>
+    <div class="div1">div3</div>
+
+
     <h5>Testing</h5>
     <div id="main">
         <div id="div1"> div1</div>
@@ -73,7 +110,7 @@ margin-bottom:10px;
         <div id="div4"> div4</div>
         <div id="div5"> div5</div>
         <div id="div6"> div6</div>
-        
+
     </div>
 </body>
 </html>
