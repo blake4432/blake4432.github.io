@@ -49,10 +49,48 @@
         }
         
     </style>
+    <link rel="stylesheet" href="site.css"/>
 </head>
 
 <body>
-    <div id="d1"></div>
+    <div id="d3"> </div>
+    <br/>
+    <button id="b3" class="btn btn-danger">
+    Load excuse
+        </button>
+    <script>
+
+        "use script";
+
+        let b3 = document.querySelector("#b3");
+        b3.addEventListener("click",loade);
+
+        let R = null;
+        let url = `https://excuser-three.vercel.app/v1/excuse/college/` ;
+
+        async function loade()
+        {
+            let r = await fetch(url);
+            let rj = await r.json();
+
+
+            let d3 = document.querySelector("#d3");
+            d3.innerHTML= rj[0].excuse;
+
+
+            //R = rj;
+            //console.log(rj);
+
+
+        }
+        loade();
+
+        
+        </script>
+    
+
+    <div class="div1"></div>>
+    <div id="d1" style=" color:red;font-size:20px;"></div>
 
     <button id="b1" class="btn btn-warning">
         <i class="bi bi-cloud-arrow-down"></i>
@@ -85,7 +123,7 @@
             console.log(rj);
 
             let d1 = document.querySelector("#d1");
-            d1.innerHTML = '<h1>fact is:<h1>
+            d1.innerHTML = `<h1>fact is:<h1>
                 < br/> 
                 <h3>${rj.fact}</h3>
                 <br/> 
@@ -93,7 +131,7 @@
                 <h3>${rj.length}</h3>
                 < br /> ${ rj.fact } <br />
              
-            ';
+            `;
 
             //end function
         });
